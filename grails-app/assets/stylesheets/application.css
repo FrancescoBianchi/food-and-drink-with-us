@@ -11,3 +11,81 @@
 *= require mobile
 *= require_self
 */
+
+/** HTML */
+body {
+    font-family: "Akkurat Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #757575;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    border-top: 1px solid #d9e5f0;
+    background: #f9fcff;
+    text-align: center;
+    padding-bottom: 40px;
+    max-width: none;
+    padding-bottom: 0;
+}
+
+h1 {
+	font-size: 3.25rem;
+    line-height: 1.2;
+    color: #4d9de0;
+    text-align: center;
+    font-family: 'Gotham SSm A', 'Gotham SSm B', Helvetica, Arial, sans-serif;
+    margin-bottom: 100px;
+}
+
+/** LOGO */
+#intercomLogo {
+	background-color: white;
+    top: 0;
+    background-color: #fff;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    margin: 0 auto;
+	overflow-x: hidden;
+	text-align: left;
+}
+
+#intercomLogo a {
+	background: transparent url(https://marketing.intercomassets.com/assets/squarespace/logo-fixed-1x-5f29c48901a2312d075ae29d6c2934c3bb542b9e6e58ff3aa000aa119ae0133d.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    background-size: 128px 30px;
+    background-position: left center;
+    width: 170px;
+    height: 40px;
+    display: inline-block;
+	margin: 1em 1em 1em 3.5%;
+}
+
+/** GUESTS */
+#guests {
+	position: relative;
+		
+}
+
+div.guest {
+    width: 16%;
+    margin: 0 3.5% 7% 3.5%;
+    float: left;
+    display: block;
+    box-sizing: border-box;
+    background: #fefeff;
+    border: 1px solid #d9e5f0;
+    padding: 20px;
+    opacity: 1;
+}
+
+div.guest .description {
+}
+
+div.guest img {
+	margin-bottom: 25px;
+	width: 95%
+}
+
+.footer {
+	background-color: #4d9de0;
+}

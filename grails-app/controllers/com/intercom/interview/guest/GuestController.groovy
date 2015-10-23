@@ -9,9 +9,6 @@ class GuestController {
 	
 	
 	def list() {
-		def dublinOffice = grailsApplication.config.coordinates.dublinOffice
-		
-		
 		[guests: guestService.findGuestsWithinDistance(getDublinCoordinate())]
 	}
 	

@@ -4,7 +4,6 @@ import java.util.List;
 
 import grails.converters.JSON
 
-import com.intercom.interview.util.Coordinate;
 import com.intercom.interview.util.MathUtils;
 
 class GuestService {

@@ -2,6 +2,7 @@ package com.intercom.interview.util
 
 import static java.lang.Math.*
 
+import com.intercom.interview.guest.Coordinate;
 import com.intercom.interview.guest.Guest
 
 

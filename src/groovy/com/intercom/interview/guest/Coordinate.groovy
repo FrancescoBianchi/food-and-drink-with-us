@@ -1,4 +1,4 @@
-package com.intercom.interview.util
+package com.intercom.interview.guest
 
 class Coordinate {
 

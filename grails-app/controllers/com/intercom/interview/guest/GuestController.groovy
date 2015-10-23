@@ -2,8 +2,6 @@ package com.intercom.interview.guest
 
 import org.codehaus.groovy.grails.commons.GrailsApplication;
 
-import com.intercom.interview.util.Coordinate;
-
 class GuestController {
 	
 	GuestService guestService

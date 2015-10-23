@@ -1,0 +1,16 @@
+# IDE files
+/wrapper
+.project
+.settings
+.link_to_grails_plugins
+grailsw*
+
+# Artifact folders
+/target*
+/bin
+
+# Package Files #
+*.jar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*

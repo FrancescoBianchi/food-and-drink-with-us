@@ -8,7 +8,7 @@ import org.junit.Test;
 import spock.lang.Specification;
 
 @TestFor(GuestController)
-class GuestControllerTest extends Specification {
+class GuestControllerSpec extends Specification {
 
     void "test controllers returns a non empty list of guests in the response"() {
         when:

@@ -89,3 +89,9 @@ div.guest img {
 .footer {
 	background-color: #4d9de0;
 }
+
+/** ERROR */
+h1.error {
+	margin: 30px 0px;
+	color: #d2504d;
+}

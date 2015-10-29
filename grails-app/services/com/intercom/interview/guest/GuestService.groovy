@@ -31,7 +31,7 @@ class GuestService {
 	}
 	
 	private List loadFromFile() {
-		def guestsFile = grailsResourceLocator.findResourceForURI('classpath:/data/guests.json').file
+		def guestsFile = grailsResourceLocator.findResourceForURI('classpath:/data/customers.json').file
 		List guests = []
 		guestsFile.eachLine {
 			try {

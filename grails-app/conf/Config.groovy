@@ -124,3 +124,5 @@ coordinates {
 		longitude = -6.2592576
 	}
 }
+
+maximumAllowedDistanceToInviteGuest = 100

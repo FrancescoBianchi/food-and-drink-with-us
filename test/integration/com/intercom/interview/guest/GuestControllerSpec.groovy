@@ -11,19 +11,19 @@ import spock.lang.Specification;
 class GuestControllerSpec extends Specification {
 
     void "test controllers returns a non empty list of guests in the response"() {
-        when:
-        def model = controller.list()
+        when: "when I ask for a list of guests who match my criterias"
+        	def model = controller.list()
 
-        then:
-        model.guests != null
-		!model.guests.isEmpty()
-		model.guests[0] instanceof Guest
-		model.guests[0].with {
-			name
-			userId
-			coordinate != null
-			coordinate.latitude > 0
-		}
+        then: "I get the list of guests"
+	        model.guests != null
+			!model.guests.isEmpty()
+			model.guests[0] instanceof Guest
+			model.guests[0].with {
+				name
+				userId
+				location != null
+				location.latitude > 0
+			}
     }
 
 }

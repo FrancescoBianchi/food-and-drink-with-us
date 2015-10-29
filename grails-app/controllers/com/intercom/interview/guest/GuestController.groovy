@@ -9,7 +9,8 @@ class GuestController {
 	
 	
 	def list() {
-		[guests: guestService.findGuestsWithinDistance(getDublinCoordinate())]
+		int distance = grailsApplication.config.maximumAllowedDistanceToInviteGuest
+		[guests: guestService.findGuestsWithinDistance(getDublinCoordinate(), distance)]
 	}
 	
 	private Coordinate getDublinCoordinate() {

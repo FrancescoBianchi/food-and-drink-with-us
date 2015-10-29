@@ -10,21 +10,19 @@ class GuestService {
 
 	def grailsResourceLocator
 	
-	def List<Guest> findGuestsWithinDistance(Coordinate referencePoint) {
-		findAllPossibleGuests().each {
-			it.distance = MathUtils.computeDistance(it.coordinate, referencePoint)
-		}.findAll {
-           it.distance <= 100
+	def List<Guest> findGuestsWithinDistance(Coordinate referencePoint, int maximumAllowedDistance) {
+		findAllCandidateGuests().findAll {
+           MathUtils.computeDistance(it.location, referencePoint) <= maximumAllowedDistance
        }.sort {it.userId}
 	}
 	
-	private List<Guest> findAllPossibleGuests() {
+	private List<Guest> findAllCandidateGuests() {
 		List dataEntries = loadFromFile()
 		dataEntries.collect {
 			new Guest(
 				userId: it.user_id,
 				name: it.name,
-				coordinate: new Coordinate (
+				location: new Coordinate (
 					latitude: it.latitude.toDouble(),
 					longitude: it.longitude.toDouble()
 				)
@@ -32,11 +30,15 @@ class GuestService {
 		}
 	}
 	
-	 private List loadFromFile() {
-		def fileIn = grailsResourceLocator.findResourceForURI('classpath:/data/guests.json').file
+	private List loadFromFile() {
+		def guestsFile = grailsResourceLocator.findResourceForURI('classpath:/data/guests.json').file
 		List guests = []
-		fileIn.eachLine {
-			guests.add JSON.parse(it)
+		guestsFile.eachLine {
+			try {
+				guests << JSON.parse(it)
+			} catch (Exception exception) {
+				log.warn "A file entry was not unmarshalled because it didn't contain a properly formatted JSON [${it}]"
+			}
 		}
 		guests
 	}

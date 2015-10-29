@@ -5,7 +5,6 @@ class Guest {
 
 	int userId
 	String name
-	Coordinate coordinate
-	double distance
+	Coordinate location
 
 }
